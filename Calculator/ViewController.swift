@@ -12,6 +12,7 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     
     var outputInterface: OutputInterface?
     var inputInterface: InputInterface?
+    var calcBrain = CalcBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
