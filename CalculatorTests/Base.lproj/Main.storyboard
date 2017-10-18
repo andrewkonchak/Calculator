@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AppleSDGothicNeo.ttc">
+            <string>AppleSDGothicNeo-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-10-09 at 1.50.33 PM" translatesAutoresizingMaskIntoConstraints="NO" id="PN6-In-Pkq">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bgm-zS-wx7">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lOC-i0-avT">
+                                    <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUm-q0-v8p">
+                                            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="lxX-29-RXO">
+                                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <vibrancyEffect>
+                                                <blurEffect style="light"/>
+                                            </vibrancyEffect>
+                                        </visualEffectView>
+                                    </subviews>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-rS-Cun">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="117"/>
+                                <connections>
+                                    <segue destination="cnH-2a-zh9" kind="embed" identifier="OutputControllerSegue" id="gsM-FI-EDJ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXe-4v-gCL">
+                                <rect key="frame" x="0.0" y="116" width="736" height="298"/>
+                                <connections>
+                                    <segue destination="6nZ-yH-L6v" kind="embed" identifier="InputControllerSegue" id="ETe-9Q-gWi"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bd2-rS-Cun" secondAttribute="bottom" constant="878" id="3Pi-rJ-JTy">
+                                <variation key="heightClass=compact-widthClass=regular" constant="297"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="bd2-rS-Cun" secondAttribute="bottom" id="41e-Yo-PjV">
+                                <variation key="heightClass=compact-widthClass=regular" constant="297"/>
+                            </constraint>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Kh-La-q44"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5u8-dA-pfJ"/>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Im-w0-Ip2"/>
+                            <constraint firstItem="CXe-4v-gCL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7K5-xV-4La"/>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="82F-kb-ZmM"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="926-0g-Fno"/>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D9c-6g-p1I"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Fe9-CQ-iqh"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LNh-eo-RNe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bd2-rS-Cun" secondAttribute="bottom" constant="235" id="Lvf-jI-Yag">
+                                <variation key="heightClass=compact-widthClass=regular" constant="297"/>
+                            </constraint>
+                            <constraint firstItem="CXe-4v-gCL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="177" id="MGp-Uw-JsF">
+                                <variation key="heightClass=compact-widthClass=regular" constant="116"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PN6-In-Pkq" secondAttribute="bottom" id="QOc-A6-bo9"/>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QQt-Mz-hq2"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Tf7-78-Wfp"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="U46-T0-JDf"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="W5y-Ks-bxl"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WvC-uz-dgA"/>
+                            <constraint firstItem="CXe-4v-gCL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XOL-wd-Wg9"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-644" id="aGh-X4-KjK">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b4E-8r-iAx"/>
+                            <constraint firstItem="PN6-In-Pkq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eCr-4p-igd"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="faj-wb-mgK"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ghi-M6-xb4"/>
+                            <constraint firstItem="Bgm-zS-wx7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hhg-z6-rBs"/>
+                            <constraint firstAttribute="trailing" secondItem="PN6-In-Pkq" secondAttribute="trailing" id="jve-MR-yc4"/>
+                            <constraint firstAttribute="bottom" secondItem="bd2-rS-Cun" secondAttribute="bottom" constant="556" id="jzL-5X-Qf6"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kcL-gQ-kX1"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="leading" secondItem="PN6-In-Pkq" secondAttribute="leading" id="njF-gH-X5g"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pSW-Ju-nQ8"/>
+                            <constraint firstItem="CXe-4v-gCL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qOM-1o-qrO"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s44-Wz-gZc"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="trailing" secondItem="PN6-In-Pkq" secondAttribute="trailing" id="vCo-24-ZXP"/>
+                            <constraint firstItem="bd2-rS-Cun" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xw5-x8-j3e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lvf-jI-Yag"/>
+                                <exclude reference="5u8-dA-pfJ"/>
+                                <exclude reference="926-0g-Fno"/>
+                                <exclude reference="Fe9-CQ-iqh"/>
+                                <exclude reference="LNh-eo-RNe"/>
+                                <exclude reference="7Im-w0-Ip2"/>
+                                <exclude reference="D9c-6g-p1I"/>
+                                <exclude reference="QQt-Mz-hq2"/>
+                                <exclude reference="b4E-8r-iAx"/>
+                                <exclude reference="3Pi-rJ-JTy"/>
+                                <exclude reference="41e-Yo-PjV"/>
+                                <exclude reference="Tf7-78-Wfp"/>
+                                <exclude reference="U46-T0-JDf"/>
+                                <exclude reference="aGh-X4-KjK"/>
+                                <exclude reference="njF-gH-X5g"/>
+                                <exclude reference="pSW-Ju-nQ8"/>
+                                <exclude reference="s44-Wz-gZc"/>
+                                <exclude reference="vCo-24-ZXP"/>
+                                <exclude reference="xw5-x8-j3e"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="PN6-In-Pkq"/>
+                                <include reference="bd2-rS-Cun"/>
+                                <include reference="CXe-4v-gCL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Lvf-jI-Yag"/>
+                                <include reference="5u8-dA-pfJ"/>
+                                <include reference="926-0g-Fno"/>
+                                <include reference="Fe9-CQ-iqh"/>
+                                <include reference="LNh-eo-RNe"/>
+                                <include reference="7Im-w0-Ip2"/>
+                                <include reference="D9c-6g-p1I"/>
+                                <include reference="QQt-Mz-hq2"/>
+                                <include reference="b4E-8r-iAx"/>
+                                <include reference="3Pi-rJ-JTy"/>
+                                <include reference="41e-Yo-PjV"/>
+                                <exclude reference="4Kh-La-q44"/>
+                                <include reference="Tf7-78-Wfp"/>
+                                <include reference="U46-T0-JDf"/>
+                                <exclude reference="WvC-uz-dgA"/>
+                                <include reference="aGh-X4-KjK"/>
+                                <exclude reference="jzL-5X-Qf6"/>
+                                <exclude reference="kcL-gQ-kX1"/>
+                                <include reference="njF-gH-X5g"/>
+                                <include reference="pSW-Ju-nQ8"/>
+                                <include reference="s44-Wz-gZc"/>
+                                <include reference="vCo-24-ZXP"/>
+                                <include reference="xw5-x8-j3e"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.6956521739130448" y="-10.597826086956523"/>
+        </scene>
+        <!--Output View Controller-->
+        <scene sceneID="BLp-M1-hS1">
+            <objects>
+                <viewController id="cnH-2a-zh9" customClass="OutputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mlZ-G5-HJf">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="117"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGm-Nr-IWe">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="117"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="87"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kGm-Nr-IWe" firstAttribute="leading" secondItem="mlZ-G5-HJf" secondAttribute="leading" id="56b-hy-BUe"/>
+                            <constraint firstAttribute="trailing" secondItem="kGm-Nr-IWe" secondAttribute="trailing" id="HgL-Uu-bOo"/>
+                            <constraint firstAttribute="bottom" secondItem="kGm-Nr-IWe" secondAttribute="bottom" id="Kp6-RQ-DHi"/>
+                            <constraint firstItem="kGm-Nr-IWe" firstAttribute="leading" secondItem="mlZ-G5-HJf" secondAttribute="leading" id="PlB-Gg-IH6"/>
+                            <constraint firstItem="kGm-Nr-IWe" firstAttribute="top" secondItem="u0a-mq-Ebu" secondAttribute="top" id="hFl-hj-7Uf"/>
+                            <constraint firstAttribute="trailing" secondItem="kGm-Nr-IWe" secondAttribute="trailing" id="im9-ne-XiU"/>
+                            <constraint firstItem="kGm-Nr-IWe" firstAttribute="top" secondItem="mlZ-G5-HJf" secondAttribute="top" id="neg-zQ-x27"/>
+                            <constraint firstItem="kGm-Nr-IWe" firstAttribute="bottom" secondItem="u0a-mq-Ebu" secondAttribute="bottom" id="qwE-bE-RU2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u0a-mq-Ebu"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HgL-Uu-bOo"/>
+                                <exclude reference="Kp6-RQ-DHi"/>
+                                <exclude reference="PlB-Gg-IH6"/>
+                                <exclude reference="neg-zQ-x27"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="HgL-Uu-bOo"/>
+                                <include reference="Kp6-RQ-DHi"/>
+                                <include reference="PlB-Gg-IH6"/>
+                                <include reference="neg-zQ-x27"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="Label" destination="kGm-Nr-IWe" id="ViI-nF-1U7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vW-cw-u3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="-237"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="guq-Eq-nmi">
+            <objects>
+                <viewController id="6nZ-yH-L6v" customClass="InputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mXY-3d-vb0">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="298"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="VzD-Kj-ZCa">
+                                <rect key="frame" x="300" y="0.0" width="434" height="298"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fLe-oc-1Zh">
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="57.333333333333336"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-47" translatesAutoresizingMaskIntoConstraints="NO" id="RRr-6e-ca7">
+                                                <rect key="frame" x="0.0" y="0.0" width="434" height="57.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wS-tM-xde" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333331" height="57.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.50045088098954649" green="0.70340187226872486" blue="0.88459440778354703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="qev-wP-Q2H"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ejh-jD-aKl">
+                                                        <rect key="frame" x="77.333333333333314" y="0.0" width="124.33333333333337" height="57.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.50045088098954649" green="0.70340187226872486" blue="0.88459440778354703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="4R4-Vs-IuB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mb9-md-xma">
+                                                        <rect key="frame" x="154.66666666666669" y="0.0" width="124.66666666666669" height="57.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.50045088098954649" green="0.70340187226872486" blue="0.88459440778354703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="8yh-ge-vv7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZHZ-CQ-Pth">
+                                                        <rect key="frame" x="232.33333333333337" y="0.0" width="124.33333333333326" height="57.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.50045088098954649" green="0.70340187226872486" blue="0.88459440778354703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                        <state key="normal" title="×">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="wWK-zf-auw"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTO-QN-WFM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                        <rect key="frame" x="309.66666666666663" y="0.0" width="124.33333333333337" height="57.333333333333336"/>
+                                                        <color key="backgroundColor" red="0.50045088098954649" green="0.70340187226872486" blue="0.88459440778354703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                        </accessibility>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                        <state key="normal" title="÷">
+                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="rvR-v1-Tyy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="RRr-6e-ca7" secondAttribute="trailing" id="Jo4-gh-R8j"/>
+                                            <constraint firstAttribute="bottom" secondItem="RRr-6e-ca7" secondAttribute="bottom" id="X0R-pw-DvC"/>
+                                            <constraint firstItem="RRr-6e-ca7" firstAttribute="top" secondItem="fLe-oc-1Zh" secondAttribute="top" id="gWq-3b-sDX"/>
+                                            <constraint firstItem="RRr-6e-ca7" firstAttribute="leading" secondItem="fLe-oc-1Zh" secondAttribute="leading" id="u9i-bq-Ofx">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Jo4-gh-R8j"/>
+                                                <exclude reference="X0R-pw-DvC"/>
+                                                <exclude reference="gWq-3b-sDX"/>
+                                                <exclude reference="u9i-bq-Ofx"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Jo4-gh-R8j"/>
+                                                <include reference="X0R-pw-DvC"/>
+                                                <include reference="gWq-3b-sDX"/>
+                                                <exclude reference="u9i-bq-Ofx"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="M7s-d1-s0q">
+                                        <rect key="frame" x="0.0" y="60.333333333333329" width="434" height="56.999999999999986"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Tg-Z6-Vw2" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.66666666666669" height="56.999999999999993"/>
+                                                <color key="backgroundColor" red="0.20150539920636479" green="0.28322315027950662" blue="0.35617990905258257" alpha="0.68453017979452058" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="fxu-pR-YzB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-Si-Jmd" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="148.66666666666669" y="0.0" width="136.66666666666669" height="56.999999999999993"/>
+                                                <color key="backgroundColor" red="0.20150539920636479" green="0.28322315027950662" blue="0.35617990905258257" alpha="0.68453017979452058" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="DmT-5F-cYJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-bW-Qnk" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="297.33333333333337" y="0.0" width="136.66666666666663" height="56.999999999999993"/>
+                                                <color key="backgroundColor" red="0.20150539920636479" green="0.28322315027950662" blue="0.35617990905258257" alpha="0.68453017979452058" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="N09-tt-G8a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Kj-0c-HK5">
+                                        <rect key="frame" x="0.0" y="120.33333333333334" width="434" height="57.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-KF-ji9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.66666666666669" height="57.333333333333329"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="z7P-Ir-Ih6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypv-1X-gGg" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="148.66666666666669" y="0.0" width="136.66666666666669" height="57.333333333333329"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="nCF-aq-TR9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oD-cL-uZl" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="297.33333333333337" y="0.0" width="136.66666666666663" height="57.333333333333329"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="N4j-w6-cHK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="a6v-HC-fmV">
+                                        <rect key="frame" x="0.0" y="180.66666666666666" width="434" height="57"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tn-GX-ThM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.66666666666669" height="57"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="IOx-Ul-z1Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQX-Oy-3HU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="148.66666666666669" y="0.0" width="136.66666666666669" height="57"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="9mV-gX-cXH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0al-Qe-nWb" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="297.33333333333337" y="0.0" width="136.66666666666663" height="57"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <color key="tintColor" red="0.34710264210000003" green="0.66302901510000001" blue="0.99927800889999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="BOr-Ez-n52"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7u6-it-G58">
+                                        <rect key="frame" x="0.0" y="240.66666666666663" width="434" height="57.333333333333371"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pk-B8-CY5" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="136.66666666666669" height="57.333333333333343"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="JZV-ej-dry"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1X-Sw-kCB" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="148.66666666666669" y="0.0" width="136.66666666666669" height="57.333333333333343"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="mSq-48-xkx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gch-N9-ICR" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="297.33333333333337" y="0.0" width="136.66666666666663" height="57.333333333333343"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="60"/>
+                                                <state key="normal" title="☜">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="Eib-8S-lrJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pnq-Xw-Um5">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="298"/>
+                                <connections>
+                                    <segue destination="T0b-C4-nQA" kind="embed" identifier="" id="lqc-OX-Ktc"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VzD-Kj-ZCa" secondAttribute="trailing" constant="2" id="5ZM-Qm-C6U"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="leading" secondItem="pnq-Xw-Um5" secondAttribute="trailing" constant="-1" id="KFW-7x-HVP"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="leading" secondItem="pnq-Xw-Um5" secondAttribute="trailing" constant="-1" id="Qmg-LT-E5P"/>
+                            <constraint firstAttribute="bottom" secondItem="VzD-Kj-ZCa" secondAttribute="bottom" id="Qqb-jK-BXb"/>
+                            <constraint firstItem="pnq-Xw-Um5" firstAttribute="top" secondItem="mXY-3d-vb0" secondAttribute="top" id="Wh7-xc-p5a"/>
+                            <constraint firstAttribute="bottom" secondItem="pnq-Xw-Um5" secondAttribute="bottom" id="XqW-v1-SWu"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="trailing" secondItem="8vR-dQ-2X4" secondAttribute="trailing" id="hCa-7j-bku"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="leading" secondItem="mXY-3d-vb0" secondAttribute="leading" id="iJ4-kY-1Aj">
+                                <variation key="heightClass=compact-widthClass=regular" constant="300"/>
+                            </constraint>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="top" secondItem="8vR-dQ-2X4" secondAttribute="top" id="lsW-cr-JFF"/>
+                            <constraint firstItem="pnq-Xw-Um5" firstAttribute="top" secondItem="8vR-dQ-2X4" secondAttribute="top" id="mRl-Ot-ZSH"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="leading" secondItem="pnq-Xw-Um5" secondAttribute="trailing" id="mer-G3-pQh"/>
+                            <constraint firstItem="pnq-Xw-Um5" firstAttribute="leading" secondItem="mXY-3d-vb0" secondAttribute="leading" id="rV6-3O-7yL"/>
+                            <constraint firstItem="pnq-Xw-Um5" firstAttribute="bottom" secondItem="VzD-Kj-ZCa" secondAttribute="bottom" id="ryp-GD-BIs"/>
+                            <constraint firstItem="VzD-Kj-ZCa" firstAttribute="bottom" secondItem="8vR-dQ-2X4" secondAttribute="bottom" id="t8S-nN-nYZ"/>
+                            <constraint firstItem="pnq-Xw-Um5" firstAttribute="leading" secondItem="mXY-3d-vb0" secondAttribute="leading" id="zBQ-1a-Wxx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8vR-dQ-2X4"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="pnq-Xw-Um5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Wh7-xc-p5a"/>
+                                <exclude reference="XqW-v1-SWu"/>
+                                <exclude reference="mRl-Ot-ZSH"/>
+                                <exclude reference="rV6-3O-7yL"/>
+                                <exclude reference="ryp-GD-BIs"/>
+                                <exclude reference="zBQ-1a-Wxx"/>
+                                <exclude reference="KFW-7x-HVP"/>
+                                <exclude reference="Qmg-LT-E5P"/>
+                                <exclude reference="hCa-7j-bku"/>
+                                <exclude reference="mer-G3-pQh"/>
+                                <exclude reference="t8S-nN-nYZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="pnq-Xw-Um5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Wh7-xc-p5a"/>
+                                <include reference="XqW-v1-SWu"/>
+                                <include reference="mRl-Ot-ZSH"/>
+                                <include reference="rV6-3O-7yL"/>
+                                <include reference="ryp-GD-BIs"/>
+                                <include reference="zBQ-1a-Wxx"/>
+                                <include reference="KFW-7x-HVP"/>
+                                <include reference="Qmg-LT-E5P"/>
+                                <exclude reference="hCa-7j-bku"/>
+                                <exclude reference="mer-G3-pQh"/>
+                                <include reference="t8S-nN-nYZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QJa-lv-bFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="155"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="5Ye-x5-Euh">
+            <objects>
+                <viewController id="T0b-C4-nQA" customClass="InputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QSp-9p-FTd">
+                        <rect key="frame" x="0.0" y="0.0" width="301" height="298"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ESV-cA-ClO">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="304"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="sit-sF-BZn">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="66"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjg-k9-oGg" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="drw-mL-jnE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i1-c9-Hhi" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="78.333333333333343" y="0.0" width="66.333333333333343" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="√">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="1xm-yR-oAv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYX-Hc-yUj" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="156.66666666666666" y="0.0" width="66" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="(">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="I1p-7W-QXG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gg-oI-09V" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="234.66666666666663" y="0.0" width="66.333333333333371" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title=")">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="Nm2-c1-6S0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="igk-Xg-6j6">
+                                        <rect key="frame" x="0.0" y="72" width="301" height="89"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKC-kC-RsY" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="89"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="sin">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="6H6-cN-0g8"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hnh-Na-qw3" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="104.33333333333334" y="0.0" width="92.333333333333343" height="89"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="cos">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="lIs-Ds-3hI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THx-CO-cYW" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="208.66666666666663" y="0.0" width="92.333333333333371" height="89"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="tan">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="y1G-nt-5UF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fMb-Ji-q0R">
+                                        <rect key="frame" x="0.0" y="167" width="301" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZ1-ek-yL9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="65"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="44"/>
+                                                <state key="normal" title="sinh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="t9z-j9-oz1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QI4-lB-4oU" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="104.33333333333334" y="0.0" width="92.333333333333343" height="65"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="44"/>
+                                                <state key="normal" title="cosh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="Oqu-D2-DvC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRN-mb-paD" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="208.66666666666663" y="0.0" width="92.333333333333371" height="65"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="44"/>
+                                                <state key="normal" title="tanh">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="5VF-62-J76"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="qi2-oA-alW">
+                                        <rect key="frame" x="0.0" y="238" width="301" height="66"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRI-6a-kxr" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="92.333333333333329" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="π">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="XP7-59-X0F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYD-8s-lZV" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="104.33333333333334" y="0.0" width="92.333333333333343" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="ln">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="ZNx-8j-LAk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p95-Ns-krY" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="208.66666666666663" y="0.0" width="92.333333333333371" height="66"/>
+                                                <color key="backgroundColor" red="0.084970712500000004" green="0.2245645906" blue="0.34587166879999998" alpha="0.6641160103" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" button="YES" playsSound="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="45"/>
+                                                <state key="normal" title="e">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="symbolPressed:" destination="T0b-C4-nQA" eventType="touchUpInside" id="G1d-N7-RoD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qi2-oA-alW" firstAttribute="top" secondItem="fMb-Ji-q0R" secondAttribute="bottom" id="4pW-Jy-JAB"/>
+                                    <constraint firstItem="igk-Xg-6j6" firstAttribute="top" secondItem="sit-sF-BZn" secondAttribute="bottom" id="MSP-K9-Dvq"/>
+                                    <constraint firstItem="igk-Xg-6j6" firstAttribute="leading" secondItem="sit-sF-BZn" secondAttribute="leading" id="ZDc-Ii-6kG"/>
+                                    <constraint firstItem="igk-Xg-6j6" firstAttribute="leading" secondItem="fMb-Ji-q0R" secondAttribute="leading" id="m4h-FA-nyY"/>
+                                    <constraint firstItem="fMb-Ji-q0R" firstAttribute="top" secondItem="ESV-cA-ClO" secondAttribute="top" constant="167" id="u1m-9U-jkc"/>
+                                    <constraint firstAttribute="trailing" secondItem="fMb-Ji-q0R" secondAttribute="trailing" constant="90" id="vzf-5I-eAZ"/>
+                                    <constraint firstItem="igk-Xg-6j6" firstAttribute="top" secondItem="sit-sF-BZn" secondAttribute="bottom" id="wTU-Ky-MVH"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="u1m-9U-jkc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" axis="vertical">
+                                    <mask key="constraints">
+                                        <exclude reference="MSP-K9-Dvq"/>
+                                        <exclude reference="wTU-Ky-MVH"/>
+                                        <include reference="u1m-9U-jkc"/>
+                                        <exclude reference="vzf-5I-eAZ"/>
+                                        <exclude reference="4pW-Jy-JAB"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ESV-cA-ClO" firstAttribute="top" secondItem="QSp-9p-FTd" secondAttribute="top" id="d2c-uX-6hj"/>
+                            <constraint firstAttribute="trailing" secondItem="ESV-cA-ClO" secondAttribute="trailing" id="hNG-FX-fFc"/>
+                            <constraint firstItem="ESV-cA-ClO" firstAttribute="leading" secondItem="QSp-9p-FTd" secondAttribute="leading" id="ucu-YR-8NR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cXc-FH-pJX"/>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="ESV-cA-ClO"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <exclude reference="ESV-cA-ClO"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKB-zg-c5E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="959"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Screen Shot 2017-10-09 at 1.50.33 PM" width="5106" height="3404"/>
+    </resources>
+</document>
