@@ -51,15 +51,14 @@ enum Constants: String {
     case e  = "e"
 }
 
+// MARK : CalculatorInterface + InputInterfaceDelegate
 
 class CalcBrain: CalculatorInterface {
-    
-    var resultClosure: ((Double?, Error?) -> Void)?
-    
     func digit(_ value: Double) {
     }
     
     func operation(_ operation: Operation) {
+        resultClosure?(123.123, nil)
     }
     
     func function(_ function: Function) {
@@ -71,4 +70,5 @@ class CalcBrain: CalculatorInterface {
     func utility(_ utility: Utility) {
     }
     
+    var resultClosure: ((Double?, Error?) -> Void)?
 }

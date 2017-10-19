@@ -16,9 +16,14 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        calcBrain.resultClosure = { result, error -> Void in
+            if let resultValue = result {
+                self.outputInterface?.display("\(resultValue)")
+            }
+        }
+        
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "OutputControllerSegue" {
             outputInterface = segue.destination as? OutputInterface
@@ -29,7 +34,9 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     }
     
     func symbolPressed(_ symbol: String) {
-        outputInterface?.display(symbol)
+        if symbol == Operation.equal.rawValue {
+            calcBrain.operation(.equal)
+        }
     }
     
 }

@@ -12,7 +12,11 @@ import AVFoundation
 class InputViewController: UIViewController, InputInterface {
     
     weak var delegate: InputInterfaceDelegate?
-
+    
+    func symbolPressed(_ symbol: String) {
+        delegate?.symbolPressed(symbol)
+    }
+    
     func playClick() {
         AudioServicesPlaySystemSound(1103)
     }
@@ -22,6 +26,6 @@ class InputViewController: UIViewController, InputInterface {
         playClick()
         
     }
-        
+    
 }
 

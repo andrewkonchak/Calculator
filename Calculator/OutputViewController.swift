@@ -9,20 +9,11 @@
 import UIKit
 
 class OutputViewController: UIViewController, OutputInterface {
-   
-    var stillTyping = false
     
     func display(_ result: String) {
-        if stillTyping {
-            if Label.text!.characters.count < 18 {
-                Label.text = Label.text! + result
-            }
-        } else {
-            Label.text = result
-            stillTyping = true
-        }
+        displayLabel.text = displayLabel.text! + result
     }
     
-    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var displayLabel: UILabel!
+    
 }
-

@@ -213,7 +213,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="Label" destination="kGm-Nr-IWe" id="ViI-nF-1U7"/>
+                        <outlet property="displayLabel" destination="kGm-Nr-IWe" id="JeW-ak-7v9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2vW-cw-u3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
