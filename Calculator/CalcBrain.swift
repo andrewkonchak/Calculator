@@ -70,5 +70,9 @@ class CalcBrain: CalculatorInterface {
     func utility(_ utility: Utility) {
     }
     
+    func constants(_ constants: Constants) {
+      
+    }
+    
     var resultClosure: ((Double?, Error?) -> Void)?
 }

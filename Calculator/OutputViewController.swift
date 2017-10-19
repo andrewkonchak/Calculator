@@ -11,7 +11,7 @@ import UIKit
 class OutputViewController: UIViewController, OutputInterface {
     
     func display(_ result: String) {
-        displayLabel.text = displayLabel.text! + result
+        displayLabel.text = displayLabel.text!
     }
     
     @IBOutlet weak var displayLabel: UILabel!
