@@ -364,6 +364,9 @@
                                                         <state key="normal" title=".">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="symbolPressed:" destination="6nZ-yH-L6v" eventType="touchUpInside" id="R2S-rV-uTY"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suf-CG-OcQ">
                                                         <rect key="frame" x="274.5" y="0.0" width="91.5" height="52"/>
