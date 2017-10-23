@@ -10,10 +10,17 @@ import UIKit
 
 class OutputViewController: UIViewController, OutputInterface {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        displayLabel.adjustsFontSizeToFitWidth = true
+        displayLabel.minimumScaleFactor = 0.5
+        displayLabel.lineBreakMode = .byTruncatingHead
+    }
+    
     func display(_ result: String) {
-        displayLabel.text = displayLabel.text!
+        let formatter = displayLabel.text = result
     }
     
     @IBOutlet weak var displayLabel: UILabel!
-    
 }

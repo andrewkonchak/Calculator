@@ -17,21 +17,19 @@ class InputViewController: UIViewController, InputInterface {
         delegate?.symbolPressed(symbol)
     }
     
-    private func playClick() {
+    func playClick() {
         AudioServicesPlaySystemSound(1103)
     }
     
     @IBAction func symbolPressed(_ sender: UIButton) {
         delegate?.symbolPressed(sender.currentTitle!)
         playClick()
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? InputViewController {
-            destination.delegate = delegate
+        if segue.identifier == "AdvancedInputSegue", var advancedInput = segue.destination as? InputInterface {
+            advancedInput.delegate = delegate
         }
     }
-    
 }
 

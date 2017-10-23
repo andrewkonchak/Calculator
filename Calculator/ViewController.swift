@@ -12,14 +12,13 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     
     var outputInterface: OutputInterface?
     var inputInterface: InputInterface?
-    
     var calcBrain = CalcBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         calcBrain.resultClosure = { result, error -> Void in
-            if let resultValue = result {
-                self.outputInterface?.display("\(resultValue)")
+            if let resultString = result {
+                self.outputInterface?.display(resultString)
             }
         }
         
@@ -32,7 +31,6 @@ class ViewController: UIViewController, InputInterfaceDelegate {
             inputInterface = segue.destination as? InputInterface
             inputInterface?.delegate = self
         }
-        
     }
     
     func symbolPressed(_ symbol: String) {
@@ -46,12 +44,16 @@ class ViewController: UIViewController, InputInterfaceDelegate {
             calcBrain.operation(.mult)
         } else if symbol == Operation.div.rawValue {
             calcBrain.operation(.div)
+        } else if symbol == Operation.exp.rawValue {
+                calcBrain.operation(.exp)
         } else if symbol == Function.sqrt.rawValue {
             calcBrain.function(.sqrt)
         } else if symbol == Function.sin.rawValue {
             calcBrain.function(.sin)
         } else if symbol == Function.cos.rawValue {
             calcBrain.function(.cos)
+        } else if symbol == Function.square.rawValue {
+            calcBrain.function(.square)
         } else if symbol == Function.tan.rawValue {
             calcBrain.function(.tan)
         } else if symbol == Function.sinh.rawValue {
@@ -64,22 +66,21 @@ class ViewController: UIViewController, InputInterfaceDelegate {
             calcBrain.function(.ln)
         } else if symbol == Function.percent.rawValue {
             calcBrain.function(.percent)
+        } else if symbol == Function.sign.rawValue {
+            calcBrain.function(.sign)
         } else if symbol == Memory.clean.rawValue {
             calcBrain.memory(.clean)
         } else if symbol == Utility.dot.rawValue {
             calcBrain.utility(.dot)
-        } else if symbol == Utility.leftBracket.rawValue {
-            calcBrain.utility(.leftBracket)
-        } else if symbol == Utility.rightBracket.rawValue {
-            calcBrain.utility(.rightBracket)
         } else if symbol == Constants.pi.rawValue {
             calcBrain.constants(.pi)
         } else if symbol == Constants.e.rawValue {
             calcBrain.constants(.e)
+        } else if let value = Int(symbol) {
+            calcBrain.digit(value)
         }
         
     }
     
 }
-
 

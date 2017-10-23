@@ -25,10 +25,10 @@ protocol InputInterfaceDelegate: class {
 
 
 protocol CalculatorInterface {
-    func digit(_ value: Double)
+    func digit(_ value: Int)
     func operation(_ operation: Operation)
     func function(_ function: Function)
     func memory(_ memory: Memory)
     func utility(_ utility: Utility)
-    var resultClosure: ((Double?, Error?) -> Void)? { get set }
+    var resultClosure: ((String?, Error?) -> Void)? { get set }
 }
