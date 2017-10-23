@@ -76,6 +76,8 @@ class ViewController: UIViewController, InputInterfaceDelegate {
             calcBrain.constants(.pi)
         } else if symbol == Constants.e.rawValue {
             calcBrain.constants(.e)
+        } else if symbol == Random.rand.rawValue {
+            calcBrain.random(.rand)
         } else if let value = Int(symbol) {
             calcBrain.digit(value)
         }

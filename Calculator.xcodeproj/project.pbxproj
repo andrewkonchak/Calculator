@@ -115,7 +115,6 @@
 				496CB3481F8BA064000403D6 /* InputViewController.swift */,
 				49328F191F8CE342000C644E /* RoundBottons.swift */,
 				496CB3211F8B8C24000403D6 /* Assets.xcassets */,
-				496CB3231F8B8C24000403D6 /* LaunchScreen.storyboard */,
 				496CB3261F8B8C24000403D6 /* Info.plist */,
 			);
 			path = Calculator;
@@ -126,6 +125,7 @@
 			children = (
 				496CB32F1F8B8C24000403D6 /* CalculatorTests.swift */,
 				496CB31E1F8B8C24000403D6 /* Main.storyboard */,
+				496CB3231F8B8C24000403D6 /* LaunchScreen.storyboard */,
 				496CB3311F8B8C24000403D6 /* Info.plist */,
 			);
 			path = CalculatorTests;

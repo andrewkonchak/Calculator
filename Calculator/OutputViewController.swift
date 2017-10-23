@@ -19,7 +19,7 @@ class OutputViewController: UIViewController, OutputInterface {
     }
     
     func display(_ result: String) {
-        let formatter = displayLabel.text = result
+        displayLabel.text = result
     }
     
     @IBOutlet weak var displayLabel: UILabel!

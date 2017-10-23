@@ -52,6 +52,10 @@ enum Constants: String {
     case e  = "e"
 }
 
+enum Random: String {
+    case rand = "Rand"
+}
+
 class CalcBrain: CalculatorInterface {
     
     var stillTyping = false
@@ -129,6 +133,8 @@ class CalcBrain: CalculatorInterface {
         }
     }
     
+    
+    
     func function(_ function: Function) {
         switch function {
         case .sign:
@@ -202,5 +208,14 @@ class CalcBrain: CalculatorInterface {
         }
         stillTyping = true
     }
+    
+    func random(_ random: Random) {
+        switch random {
+        case .rand:
+            let randomNumbers = formatter.string(for: arc4random_uniform(1000)) ?? ""
+            outputString = "\(arc4random_uniform(1000))"
 
+        }
+
+    }
 }
