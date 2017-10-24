@@ -191,7 +191,7 @@ class CalcBrain: CalculatorInterface {
                 dotIsPlace = true
             } else if !stillTyping && !dotIsPlace {
                 outputString = "0."
-            }
+            } 
         default:
             break
         }
