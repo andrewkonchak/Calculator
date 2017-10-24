@@ -29,6 +29,7 @@
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-rS-Cun">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <segue destination="cnH-2a-zh9" kind="embed" identifier="OutputControllerSegue" id="gsM-FI-EDJ"/>
                                 </connections>
@@ -376,7 +377,7 @@
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ux-LR-PAj">
-                                <rect key="frame" x="0.0" y="0.0" width="267" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="324.66666666666669" height="209"/>
                                 <connections>
                                     <segue destination="nDV-83-abm" kind="embed" identifier="AdvancedInputSegue" id="Oat-z6-0il"/>
                                 </connections>
@@ -493,17 +494,17 @@
             <objects>
                 <viewController id="nDV-83-abm" customClass="InputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mEx-Vc-5oq">
-                        <rect key="frame" x="0.0" y="0.0" width="267" height="230"/>
+                        <rect key="frame" x="0.0" y="0.0" width="324.66666666666669" height="209"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="D0u-Cy-fiv">
-                                <rect key="frame" x="0.0" y="0.0" width="267" height="230"/>
+                                <rect key="frame" x="0.0" y="0.0" width="324.5" height="209"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-fa-JnU">
-                                        <rect key="frame" x="0.0" y="0.0" width="267" height="57"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="324.5" height="51.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5Y-nY-mS9" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="57"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.72543364759999995" green="0.72552204129999998" blue="0.72540360690000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="^">
@@ -517,7 +518,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqS-ap-5vM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="89.5" y="0.0" width="88" height="57"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.72543364759999995" green="0.72552204129999998" blue="0.72540360690000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="x²">
@@ -531,7 +532,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbc-uq-uKf" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="0.0" width="88.5" height="57"/>
+                                                <rect key="frame" x="217" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.72543364759999995" green="0.72552204129999998" blue="0.72540360690000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="π">
@@ -547,10 +548,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-fc-nWR">
-                                        <rect key="frame" x="0.0" y="58" width="267" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="324.5" height="51.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h5-WS-bX1" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="56.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="sin">
@@ -564,7 +565,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGV-5q-EHM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="89.5" y="0.0" width="88" height="56.5"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="cos">
@@ -578,7 +579,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmI-gN-g4c" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="0.0" width="88.5" height="56.5"/>
+                                                <rect key="frame" x="217" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="tan">
@@ -594,10 +595,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qMp-qg-9Oh">
-                                        <rect key="frame" x="0.0" y="115.5" width="267" height="57"/>
+                                        <rect key="frame" x="0.0" y="105" width="324.5" height="51.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-e9-0g6" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="57"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="sinh">
@@ -611,7 +612,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-hb-8Qh" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="89.5" y="0.0" width="88" height="57"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="cosh">
@@ -625,7 +626,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-O1-PL2" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="0.0" width="88.5" height="57"/>
+                                                <rect key="frame" x="217" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="tanh">
@@ -641,10 +642,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pTe-iX-1eQ">
-                                        <rect key="frame" x="0.0" y="173.5" width="267" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="157.5" width="324.5" height="51.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-gY-azX" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="56.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="√">
@@ -658,7 +659,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ul-Sa-gZN" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="89.5" y="0.0" width="88" height="56.5"/>
+                                                <rect key="frame" x="108.5" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="ln">
@@ -672,7 +673,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-Z9-nKT" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="178.5" y="0.0" width="88.5" height="56.5"/>
+                                                <rect key="frame" x="217" y="0.0" width="107.5" height="51.5"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="e">
