@@ -24,6 +24,7 @@ class InputViewController: UIViewController, InputInterface {
     @IBAction func symbolPressed(_ sender: UIButton) {
         delegate?.symbolPressed(sender.currentTitle!)
         playClick()
+        sender.shake()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,19 +23,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd2-rS-Cun">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
-                                <color key="backgroundColor" red="0.1921062768" green="0.21605676409999999" blue="0.38469591739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="180"/>
                                 <connections>
                                     <segue destination="cnH-2a-zh9" kind="embed" identifier="OutputControllerSegue" id="gsM-FI-EDJ"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXe-4v-gCL">
-                                <rect key="frame" x="0.0" y="221" width="414" height="515"/>
-                                <color key="backgroundColor" red="0.83522969484329224" green="0.83533042669296265" blue="0.83519536256790161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="177" width="736" height="237"/>
                                 <connections>
                                     <segue destination="6nZ-yH-L6v" kind="embed" identifier="InputControllerSegue" id="ETe-9Q-gWi"/>
                                 </connections>
@@ -99,11 +96,11 @@
             <objects>
                 <viewController id="cnH-2a-zh9" customClass="OutputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mlZ-G5-HJf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="180"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="kGm-Nr-IWe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="224"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="180"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="87"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -153,17 +150,17 @@
             <objects>
                 <viewController id="6nZ-yH-L6v" customClass="InputViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mXY-3d-vb0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="237"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="RPh-Vn-ObX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="515"/>
+                                <rect key="frame" x="299" y="0.0" width="437" height="237"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="yzP-Dm-o5P">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="437" height="47.333333333333336"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApC-Rp-gsN">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333331" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.72543364763259888" green="0.72552204132080078" blue="0.72540360689163208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
                                                 <state key="normal" title="☜">
@@ -174,7 +171,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kA4-1r-wnR">
-                                                <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="109.33333333333331" y="0.0" width="109.33333333333331" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.72543364763259888" green="0.72552204132080078" blue="0.72540360689163208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
                                                 <state key="normal" title="%">
@@ -185,7 +182,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfw-qz-jP2">
-                                                <rect key="frame" x="207.00000000000003" y="0.0" width="103.66666666666671" height="103"/>
+                                                <rect key="frame" x="218.66666666666663" y="0.0" width="109" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.72543364763259888" green="0.72552204132080078" blue="0.72540360689163208" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="28"/>
                                                 <state key="normal" title="+/-">
@@ -196,7 +193,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0e-KX-7wk" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="310.66666666666674" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="327.66666666666663" y="0.0" width="109.33333333333337" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="1" green="0.384926438331604" blue="0.24654251337051392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="÷">
@@ -209,10 +206,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CJB-Wq-3gI">
-                                        <rect key="frame" x="0.0" y="103" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="47.333333333333329" width="437" height="47.333333333333329"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yt7-3P-npE">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333331" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="7">
@@ -223,7 +220,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-yZ-nTB">
-                                                <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="109.33333333333331" y="0.0" width="109.33333333333331" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="8">
@@ -234,7 +231,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkp-y8-lRG">
-                                                <rect key="frame" x="207.00000000000003" y="0.0" width="103.66666666666671" height="103"/>
+                                                <rect key="frame" x="218.66666666666663" y="0.0" width="109" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="9">
@@ -245,7 +242,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH0-Z0-3r1">
-                                                <rect key="frame" x="310.66666666666674" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="327.66666666666663" y="0.0" width="109.33333333333337" height="47.333333333333336"/>
                                                 <color key="backgroundColor" red="1" green="0.4443124532699585" blue="0.24637198448181152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="×">
@@ -258,10 +255,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SZS-16-qA4">
-                                        <rect key="frame" x="0.0" y="206" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="94.666666666666657" width="437" height="47.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1x-cb-4H6">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333331" height="47.666666666666671"/>
                                                 <color key="backgroundColor" red="0.83522957563400269" green="0.83533042669296265" blue="0.83519536256790161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="4">
@@ -272,7 +269,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l2-ve-sdA">
-                                                <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="109.33333333333331" y="0.0" width="109.33333333333331" height="47.666666666666671"/>
                                                 <color key="backgroundColor" red="0.83522957563400269" green="0.83533042669296265" blue="0.83519536256790161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="5">
@@ -283,7 +280,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cg-vJ-O9U">
-                                                <rect key="frame" x="207.00000000000003" y="0.0" width="103.66666666666671" height="103"/>
+                                                <rect key="frame" x="218.66666666666663" y="0.0" width="109" height="47.666666666666671"/>
                                                 <color key="backgroundColor" red="0.83522957563400269" green="0.83533042669296265" blue="0.83519536256790161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="6">
@@ -294,7 +291,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-Tu-enO">
-                                                <rect key="frame" x="310.66666666666674" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="327.66666666666663" y="0.0" width="109.33333333333337" height="47.666666666666671"/>
                                                 <color key="backgroundColor" red="1" green="0.50876587629318237" blue="0.24212804436683655" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="-">
@@ -307,10 +304,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fdv-bp-UTY">
-                                        <rect key="frame" x="0.0" y="309" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="142.33333333333334" width="437" height="47.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgC-iR-5mA">
-                                                <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.33333333333331" height="47.333333333333314"/>
                                                 <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185463428497314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="1">
@@ -321,7 +318,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDz-rQ-ZmL">
-                                                <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="109.33333333333331" y="0.0" width="109.33333333333331" height="47.333333333333314"/>
                                                 <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185463428497314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="2">
@@ -332,7 +329,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTg-r3-k6g">
-                                                <rect key="frame" x="207.00000000000003" y="0.0" width="103.66666666666671" height="103"/>
+                                                <rect key="frame" x="218.66666666666663" y="0.0" width="109" height="47.333333333333314"/>
                                                 <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185463428497314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="3">
@@ -343,7 +340,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qp-Rf-Y2Z">
-                                                <rect key="frame" x="310.66666666666674" y="0.0" width="103.33333333333331" height="103"/>
+                                                <rect key="frame" x="327.66666666666663" y="0.0" width="109.33333333333337" height="47.333333333333314"/>
                                                 <color key="backgroundColor" red="1" green="0.57068717479705811" blue="0.23784381151199341" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="+">
@@ -356,13 +353,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3NL-Om-HER">
-                                        <rect key="frame" x="0.0" y="412" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="189.66666666666663" width="437" height="47.333333333333343"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Psb-FX-9jn">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="437" height="47.333333333333343"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08n-SF-yIe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="103"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.33333333333331" height="47.333333333333343"/>
                                                         <color key="backgroundColor" red="0.9293404221534729" green="0.92945182323455811" blue="0.92930251359939575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <rect key="contentStretch" x="0.050000000000000003" y="0.0" width="1" height="1"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
@@ -374,7 +371,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08a-NA-BI5">
-                                                        <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="103"/>
+                                                        <rect key="frame" x="109.33333333333331" y="0.0" width="109.33333333333331" height="47.333333333333343"/>
                                                         <color key="backgroundColor" red="0.9293404221534729" green="0.92945182323455811" blue="0.92930251359939575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                         <state key="normal" title="0">
@@ -385,7 +382,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJV-cY-2Yj">
-                                                        <rect key="frame" x="207.00000000000003" y="0.0" width="103.66666666666671" height="103"/>
+                                                        <rect key="frame" x="218.66666666666663" y="0.0" width="109" height="47.333333333333343"/>
                                                         <color key="backgroundColor" red="0.9293404221534729" green="0.92945182323455811" blue="0.92930251359939575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                         <state key="normal" title=".">
@@ -396,7 +393,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suf-CG-OcQ">
-                                                        <rect key="frame" x="310.66666666666674" y="0.0" width="103.33333333333331" height="103"/>
+                                                        <rect key="frame" x="327.66666666666663" y="0.0" width="109.33333333333337" height="47.333333333333343"/>
                                                         <color key="backgroundColor" red="1" green="0.62957942485809326" blue="0.22947788238525391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                         <state key="normal" title="=">
@@ -419,6 +416,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
+                        <color key="backgroundColor" red="0.7999380827" green="0.80003482100000001" blue="0.79990512130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9ux-LR-PAj" firstAttribute="bottom" secondItem="8vR-dQ-2X4" secondAttribute="bottom" id="0LM-Ro-2tZ"/>
                             <constraint firstItem="9ux-LR-PAj" firstAttribute="leading" secondItem="mXY-3d-vb0" secondAttribute="leading" id="2KF-pc-hc2"/>
@@ -599,12 +597,12 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-fc-nWR">
-                                        <rect key="frame" x="0.0" y="48" width="299" height="61"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QQr-fc-nWR">
+                                        <rect key="frame" x="0.0" y="48" width="299" height="63"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h5-WS-bX1" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="61"/>
-                                                <color key="backgroundColor" red="0.7999380827" green="0.80003482100000001" blue="0.79990512130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h5-WS-bX1" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="63"/>
+                                                <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="sin">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -616,9 +614,9 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="sPR-k2-Uu3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGV-5q-EHM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="99" height="61"/>
-                                                <color key="backgroundColor" red="0.7999380827" green="0.80003482100000001" blue="0.79990512130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGV-5q-EHM" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="99" height="63"/>
+                                                <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="cos">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -630,9 +628,9 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="QRa-rD-IvL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmI-gN-g4c" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="99" height="61"/>
-                                                <color key="backgroundColor" red="0.7999380827" green="0.80003482100000001" blue="0.79990512130000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmI-gN-g4c" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="99" height="63"/>
+                                                <color key="backgroundColor" red="0.79993808269500732" green="0.80003482103347778" blue="0.79990512132644653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="tan">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -646,12 +644,12 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qMp-qg-9Oh">
-                                        <rect key="frame" x="0.0" y="110" width="299" height="63"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="qMp-qg-9Oh">
+                                        <rect key="frame" x="0.0" y="112" width="299" height="63"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-e9-0g6" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dal-e9-0g6" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="63"/>
-                                                <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185457468032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="sinh">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -663,9 +661,9 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="vrj-Iw-aVZ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-hb-8Qh" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSb-hb-8Qh" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="100" y="0.0" width="99" height="63"/>
-                                                <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185457468032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="cosh">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -677,9 +675,9 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="fOl-00-s5q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-O1-PL2" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdb-O1-PL2" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
                                                 <rect key="frame" x="200" y="0.0" width="99" height="63"/>
-                                                <color key="backgroundColor" red="0.90189141035079956" green="0.90199977159500122" blue="0.90185457468032837" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90973395109176636" green="0.90984320640563965" blue="0.90969687700271606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="tanh">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -693,11 +691,11 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pTe-iX-1eQ">
-                                        <rect key="frame" x="0.0" y="174" width="299" height="63"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pTe-iX-1eQ">
+                                        <rect key="frame" x="0.0" y="176" width="299" height="61"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-gY-azX" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="63"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Re1-gY-azX" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="61"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="√">
@@ -710,8 +708,8 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="8gJ-cc-1IS"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ul-Sa-gZN" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="99" height="63"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ul-Sa-gZN" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="100" y="0.0" width="99" height="61"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="ln">
@@ -724,8 +722,8 @@
                                                     <action selector="symbolPressed:" destination="nDV-83-abm" eventType="touchUpInside" id="xdj-h2-hHV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-Z9-nKT" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="99" height="63"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bC-Z9-nKT" customClass="MyButton" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="0.0" width="99" height="61"/>
                                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="37"/>
                                                 <state key="normal" title="e">
@@ -744,7 +742,6 @@
                                 <constraints>
                                     <constraint firstItem="QQr-fc-nWR" firstAttribute="top" secondItem="D0u-Cy-fiv" secondAttribute="top" constant="48" id="Urq-dy-yhe"/>
                                     <constraint firstItem="QQr-fc-nWR" firstAttribute="top" secondItem="D0u-Cy-fiv" secondAttribute="top" constant="48" id="a9v-U6-fNb"/>
-                                    <constraint firstItem="qMp-qg-9Oh" firstAttribute="top" secondItem="D0u-Cy-fiv" secondAttribute="top" constant="110" id="uUg-ag-dCf"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -764,7 +761,7 @@
                                 </variation>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.83522969479999998" green="0.83533042670000002" blue="0.83519536260000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.84412738377108099" green="0.85248508064010153" blue="0.85248508064010153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D0u-Cy-fiv" firstAttribute="top" secondItem="gxh-eh-OjH" secondAttribute="top" id="1Tw-aO-1jW"/>
                             <constraint firstItem="D0u-Cy-fiv" firstAttribute="top" secondItem="mEx-Vc-5oq" secondAttribute="top" id="5of-fv-NVw"/>

@@ -10,7 +10,7 @@
 		490A1CEE1F90FF4F002990ED /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1CED1F90FF4F002990ED /* Protocols.swift */; };
 		490A1CF01F90FFC6002990ED /* CalcBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A1CEF1F90FFC6002990ED /* CalcBrain.swift */; };
 		49327E861F8E4D9400476EE7 /* OutputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49327E851F8E4D9400476EE7 /* OutputViewController.swift */; };
-		49328F1A1F8CE342000C644E /* RoundBottons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49328F191F8CE342000C644E /* RoundBottons.swift */; };
+		49328F1A1F8CE342000C644E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49328F191F8CE342000C644E /* Buttons.swift */; };
 		496CB31B1F8B8C24000403D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB31A1F8B8C24000403D6 /* AppDelegate.swift */; };
 		496CB31D1F8B8C24000403D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496CB31C1F8B8C24000403D6 /* ViewController.swift */; };
 		496CB3201F8B8C24000403D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 496CB31E1F8B8C24000403D6 /* Main.storyboard */; };
@@ -42,7 +42,7 @@
 		490A1CED1F90FF4F002990ED /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		490A1CEF1F90FFC6002990ED /* CalcBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBrain.swift; sourceTree = "<group>"; };
 		49327E851F8E4D9400476EE7 /* OutputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputViewController.swift; sourceTree = "<group>"; };
-		49328F191F8CE342000C644E /* RoundBottons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBottons.swift; sourceTree = "<group>"; };
+		49328F191F8CE342000C644E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		496CB3171F8B8C24000403D6 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		496CB31A1F8B8C24000403D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		496CB31C1F8B8C24000403D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				49327E851F8E4D9400476EE7 /* OutputViewController.swift */,
 				490A1CEF1F90FFC6002990ED /* CalcBrain.swift */,
 				496CB3481F8BA064000403D6 /* InputViewController.swift */,
-				49328F191F8CE342000C644E /* RoundBottons.swift */,
+				49328F191F8CE342000C644E /* Buttons.swift */,
 				496CB3211F8B8C24000403D6 /* Assets.xcassets */,
 				496CB3261F8B8C24000403D6 /* Info.plist */,
 			);
@@ -278,7 +278,7 @@
 				496CB3491F8BA064000403D6 /* InputViewController.swift in Sources */,
 				496CB31D1F8B8C24000403D6 /* ViewController.swift in Sources */,
 				490A1CEE1F90FF4F002990ED /* Protocols.swift in Sources */,
-				49328F1A1F8CE342000C644E /* RoundBottons.swift in Sources */,
+				49328F1A1F8CE342000C644E /* Buttons.swift in Sources */,
 				496CB31B1F8B8C24000403D6 /* AppDelegate.swift in Sources */,
 				490A1CF01F90FFC6002990ED /* CalcBrain.swift in Sources */,
 			);
