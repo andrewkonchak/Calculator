@@ -212,8 +212,7 @@ class CalcBrain: CalculatorInterface {
     func random(_ random: Random) {
         switch random {
         case .rand:
-            let randomNumbers = formatter.string(for: arc4random_uniform(1000)) ?? ""
-            outputString = "\(arc4random_uniform(1000))"
+            outputString = "\(arc4random_uniform(10000))"
 
         }
 

@@ -8,14 +8,22 @@
 
 import Foundation
 
+enum Theme {
+    case red
+    case grey
+    case black
+}
+
 // MARK: - Protocols
 
 protocol InputInterface {
     var delegate: InputInterfaceDelegate? { get set }
+    func themeChanged(theme: Theme)
 }
 
 protocol OutputInterface {
     func display(_ result: String)
+    func themeChanged(theme: Theme)
     
 }
 

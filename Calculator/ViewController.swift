@@ -14,14 +14,98 @@ class ViewController: UIViewController, InputInterfaceDelegate {
     var inputInterface: InputInterface?
     var calcBrain = CalcBrain()
     
+    @IBOutlet weak var selectedThemeButton: UIButton!
+    @IBOutlet weak var redThemeButton: UIButton!
+    @IBOutlet weak var greyThemeButton: UIButton!
+    @IBOutlet weak var blackThemeButton: UIButton!
+    @IBOutlet weak var themeView: UIView!
+    
+    @IBOutlet weak var redThemeLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var greyThemeLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var blackThemeLeftConstraint: NSLayoutConstraint!
+    
+    var themeViewIsExpanded: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedThemeButton.layer.cornerRadius = selectedThemeButton.frame.size.height / 2
+        redThemeButton.layer.cornerRadius = redThemeButton.frame.size.height / 2
+        greyThemeButton.layer.cornerRadius = greyThemeButton.frame.size.height / 2
+        blackThemeButton.layer.cornerRadius = blackThemeButton.frame.size.height / 2
+        
+        selectedThemeButton.layer.borderWidth = 1
+        redThemeButton.layer.borderWidth = 1
+        greyThemeButton.layer.borderWidth = 1
+        blackThemeButton.layer.borderWidth = 1
+        
+        redThemeButton.backgroundColor = .red
+        greyThemeButton.backgroundColor = .gray
+        blackThemeButton.backgroundColor = .black
+        
+        
+        selectedThemeButton.layer.borderColor = UIColor.blue.cgColor
+        redThemeButton.layer.borderColor = UIColor.white.cgColor
+        greyThemeButton.layer.borderColor = UIColor.white.cgColor
+        blackThemeButton.layer.borderColor = UIColor.white.cgColor
+        
+        animateThemeView(expand: false, animated: false, selectedColor: .gray)
+        inputInterface?.themeChanged(theme: .grey)
+        outputInterface?.themeChanged(theme: .grey)
+        
         calcBrain.resultClosure = { result, error -> Void in
             if let resultString = result {
                 self.outputInterface?.display(resultString)
             }
         }
         
+    }
+    
+    func animateThemeView(expand: Bool, animated: Bool, selectedColor: UIColor?) {
+        themeViewIsExpanded = expand
+        
+        if let color = selectedColor {
+            selectedThemeButton.backgroundColor = color
+        }
+        
+        if expand {
+            self.redThemeLeftConstraint.constant = 38
+            self.greyThemeLeftConstraint.constant = 76
+            self.blackThemeLeftConstraint.constant = 114
+            
+            UIView.animate(withDuration: animated ? 0.7 : 0, animations: {
+                self.themeView.layoutIfNeeded()
+            })
+        } else {
+            self.redThemeLeftConstraint.constant = 0
+            self.greyThemeLeftConstraint.constant = 0
+            self.blackThemeLeftConstraint.constant = 0
+            
+            UIView.animate(withDuration: animated ? 0.7 : 0, animations: {
+                self.themeView.layoutIfNeeded()
+            })
+        }
+    }
+    
+    @IBAction func selectedThemeAction(_ sender: UIButton) {
+        animateThemeView(expand: !themeViewIsExpanded, animated: true, selectedColor: nil)
+    }
+    
+    @IBAction func redThemeAction(_ sender: UIButton) {
+        animateThemeView(expand: !themeViewIsExpanded, animated: true, selectedColor: sender.backgroundColor)
+        inputInterface?.themeChanged(theme: .red)
+        outputInterface?.themeChanged(theme: .red)
+    }
+    
+    @IBAction func greyThemeAction(_ sender: UIButton) {
+        animateThemeView(expand: !themeViewIsExpanded, animated: true, selectedColor: sender.backgroundColor)
+        inputInterface?.themeChanged(theme: .grey)
+        outputInterface?.themeChanged(theme: .grey)
+    }
+    
+    @IBAction func blackThemeAction(_ sender: UIButton) {
+        animateThemeView(expand: !themeViewIsExpanded, animated: true, selectedColor: sender.backgroundColor)
+        inputInterface?.themeChanged(theme: .black)
+        outputInterface?.themeChanged(theme: .black)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
