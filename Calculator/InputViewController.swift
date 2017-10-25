@@ -24,33 +24,33 @@ class InputViewController: UIViewController, InputInterface {
         switch theme {
         case .red:
             for button in basicButtons {
-                button.backgroundColor = #colorLiteral(red: 0.950333178, green: 0.3766738176, blue: 0.3466693163, alpha: 1)
-                button.setTitleColor(#colorLiteral(red: 1, green: 0.8134765202, blue: 0.855745396, alpha: 1), for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.9418521523, green: 0.3477120399, blue: 0.3373567164, alpha: 1)
+                button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             }
             
             for button in mainOperationButtons {
-                button.backgroundColor = .red
-                button.setTitleColor(.black, for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.9025143981, green: 0.2611960769, blue: 0.2626220584, alpha: 1)
+                button.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             }
         case .grey:
             for button in basicButtons {
-                button.backgroundColor = .gray
-                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.7789977929, green: 0.7817359264, blue: 0.7899503269, alpha: 1)
+                button.setTitleColor(.black, for: .normal)
             }
             
             for button in mainOperationButtons {
-                button.backgroundColor = .gray
-                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.9539791942, green: 0.4415323734, blue: 0.2471605241, alpha: 1)
+                button.setTitleColor(.black, for: .normal)
             }
         case .black:
             for button in basicButtons {
-                button.backgroundColor = .black
-                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.1490048468, green: 0.1490279436, blue: 0.1489969492, alpha: 1)
+                button.setTitleColor(#colorLiteral(red: 0.5528970957, green: 0.552965939, blue: 0.5528736711, alpha: 1), for: .normal)
             }
             
             for button in mainOperationButtons {
-                button.backgroundColor = .black
-                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = #colorLiteral(red: 0.9856122614, green: 1, blue: 0.7326840255, alpha: 1)
+                button.setTitleColor(.black, for: .normal)
             }
 
         }

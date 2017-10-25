@@ -23,14 +23,14 @@ class OutputViewController: UIViewController, OutputInterface {
     func themeChanged(theme: Theme) {
         switch theme {
         case .red:
-            displayLabel.textColor = .white
-            displayLabel.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+            displayLabel.textColor = #colorLiteral(red: 0.839222014, green: 0.8486475945, blue: 0.8966010213, alpha: 1)
+            displayLabel.backgroundColor = #colorLiteral(red: 0.2042686343, green: 0.2187210023, blue: 0.4076853991, alpha: 1)
         case .grey:
-            displayLabel.textColor = .white
+            displayLabel.textColor = .white 
             displayLabel.backgroundColor = .black
         case .black:
-            displayLabel.textColor = .black
-            displayLabel.backgroundColor = .white
+            displayLabel.textColor = #colorLiteral(red: 0.8744425178, green: 0.8745476604, blue: 0.8744066358, alpha: 1)
+            displayLabel.backgroundColor = #colorLiteral(red: 0.09410684556, green: 0.09412372857, blue: 0.09410110861, alpha: 1)
         }
     }
     
