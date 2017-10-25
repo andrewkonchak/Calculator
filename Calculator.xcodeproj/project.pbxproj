@@ -84,6 +84,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49407FE81FA077D200659A24 /* Program Files */ = {
+			isa = PBXGroup;
+			children = (
+				49407FED1FA0787D00659A24 /* Utilites */,
+				49407FE91FA0781600659A24 /* Controllers */,
+				49407FEC1FA0785B00659A24 /* Brain */,
+			);
+			path = "Program Files";
+			sourceTree = "<group>";
+		};
+		49407FE91FA0781600659A24 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49328F191F8CE342000C644E /* Buttons.swift */,
+				496CB31C1F8B8C24000403D6 /* ViewController.swift */,
+				49327E851F8E4D9400476EE7 /* OutputViewController.swift */,
+				496CB3481F8BA064000403D6 /* InputViewController.swift */,
+				49407FEB1FA0783E00659A24 /* Views */,
+				49407FEA1FA0782500659A24 /* Graphics */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		49407FEA1FA0782500659A24 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				496CB3211F8B8C24000403D6 /* Assets.xcassets */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		49407FEB1FA0783E00659A24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				496CB31E1F8B8C24000403D6 /* Main.storyboard */,
+				496CB3231F8B8C24000403D6 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49407FEC1FA0785B00659A24 /* Brain */ = {
+			isa = PBXGroup;
+			children = (
+				490A1CEF1F90FFC6002990ED /* CalcBrain.swift */,
+			);
+			path = Brain;
+			sourceTree = "<group>";
+		};
+		49407FED1FA0787D00659A24 /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				496CB31A1F8B8C24000403D6 /* AppDelegate.swift */,
+				490A1CED1F90FF4F002990ED /* Protocols.swift */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
 		496CB30E1F8B8C24000403D6 = {
 			isa = PBXGroup;
 			children = (
@@ -107,15 +164,8 @@
 		496CB3191F8B8C24000403D6 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				496CB31A1F8B8C24000403D6 /* AppDelegate.swift */,
-				496CB31C1F8B8C24000403D6 /* ViewController.swift */,
-				490A1CED1F90FF4F002990ED /* Protocols.swift */,
-				49327E851F8E4D9400476EE7 /* OutputViewController.swift */,
-				490A1CEF1F90FFC6002990ED /* CalcBrain.swift */,
-				496CB3481F8BA064000403D6 /* InputViewController.swift */,
-				49328F191F8CE342000C644E /* Buttons.swift */,
-				496CB3211F8B8C24000403D6 /* Assets.xcassets */,
 				496CB3261F8B8C24000403D6 /* Info.plist */,
+				49407FE81FA077D200659A24 /* Program Files */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -124,8 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				496CB32F1F8B8C24000403D6 /* CalculatorTests.swift */,
-				496CB31E1F8B8C24000403D6 /* Main.storyboard */,
-				496CB3231F8B8C24000403D6 /* LaunchScreen.storyboard */,
 				496CB3311F8B8C24000403D6 /* Info.plist */,
 			);
 			path = CalculatorTests;

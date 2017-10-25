@@ -212,7 +212,7 @@ class CalcBrain: CalculatorInterface {
     func random(_ random: Random) {
         switch random {
         case .rand:
-            outputString = "\(arc4random_uniform(10000))"
+             outputString = "\(arc4random_uniform(10000))"
 
         }
 

@@ -34,7 +34,7 @@ extension UIButton {
     func flash() {
         
         let flash = CABasicAnimation(keyPath: "opacity")
-        flash.duration = 0.4
+        flash.duration = 0.3
         flash.fromValue = 1
         flash.toValue = 0.1
         flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
