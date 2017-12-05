@@ -57,7 +57,7 @@ class InputViewController: UIViewController, InputInterface {
     }
     
     func playClick() {
-        AudioServicesPlaySystemSound(1103)
+        AudioServicesPlaySystemSound(1104)
     }
     
     @IBAction func symbolPressed(_ sender: UIButton) {

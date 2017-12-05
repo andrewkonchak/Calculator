@@ -33,20 +33,20 @@ class ViewController: UIViewController, InputInterfaceDelegate {
         greyThemeButton.layer.cornerRadius = greyThemeButton.frame.size.height / 2
         blackThemeButton.layer.cornerRadius = blackThemeButton.frame.size.height / 2
         
-        selectedThemeButton.layer.borderWidth = 1
-        redThemeButton.layer.borderWidth = 1
-        greyThemeButton.layer.borderWidth = 1
-        blackThemeButton.layer.borderWidth = 1
+        selectedThemeButton.layer.borderWidth = 1.5
+        redThemeButton.layer.borderWidth = 1.5
+        greyThemeButton.layer.borderWidth = 1.5
+        blackThemeButton.layer.borderWidth = 1.5
         
         redThemeButton.backgroundColor = .red
         greyThemeButton.backgroundColor = .gray
         blackThemeButton.backgroundColor = .black
         
         
-        selectedThemeButton.layer.borderColor = UIColor.blue.cgColor
-        redThemeButton.layer.borderColor = UIColor.white.cgColor
-        greyThemeButton.layer.borderColor = UIColor.white.cgColor
-        blackThemeButton.layer.borderColor = UIColor.white.cgColor
+        selectedThemeButton.layer.borderColor = UIColor.white.cgColor
+        redThemeButton.layer.borderColor = UIColor.purple.cgColor
+        greyThemeButton.layer.borderColor = UIColor.purple.cgColor
+        blackThemeButton.layer.borderColor = UIColor.purple.cgColor
         
         animateThemeView(expand: false, animated: false, selectedColor: .gray)
         inputInterface?.themeChanged(theme: .grey)
